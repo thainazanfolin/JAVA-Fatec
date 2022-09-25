@@ -22,10 +22,12 @@ public class Lista2 {
         if (num1 > 20){
             System.out.println("O número digitado foi " + num1);
         }else{
-            System.out.println("Númrero inválido");
+            System.out.println("Númrero inválido, menor que 20");
         }
         
         // 2- Adição de dois inteiros e mostrar se for maior que 10
+        
+        System.out.println("_______________________________________");
         
         System.out.println("Fazendo a soma");
         System.out.println("Digite o primeiro número inteiro");
@@ -41,6 +43,8 @@ public class Lista2 {
             System.out.println("Soma não atingiu o valor mínimo");
         }
         
+        System.out.println("_______________________________________");
+        
         // 3- Entrar com um número e imprimir a raiz quadrada do número caso ele seja positivo e o 
         //quadrado do número caso ele seja negativo
        
@@ -55,6 +59,7 @@ public class Lista2 {
             System.out.println("O quadrado do número é " + Math.pow(num2, 2));
         }
         
+        System.out.println("_______________________________________");
         //4- Entrar com um número e imprimir uma das mensagens: é múltiplo de 3 ou não é 
         //múltiplo de 3
         
@@ -68,6 +73,8 @@ public class Lista2 {
         }else if (num3%3 != 0) {
             System.out.println("Não é múltiplo de 3");
         }
+        
+        System.out.println("_______________________________________");
         
         //5- Entrar com um número e informar se ele é divisível por 3 e por 7
         
@@ -88,21 +95,37 @@ public class Lista2 {
             
         }
         
+        System.out.println("_______________________________________");
+        
         //6- Entrar comum número e informar se ele é divisível por 10, por 5, por 2 ou se não é
         //divisível por nenhum destes
-        /*
+        
         System.out.println("Digite um número");
         num5=sc.nextDouble();
         
-        if (num5%10 == 0){ //todo numero divisivel por 10 é também por 2 e por 5
+        if (num5%10 == 0 && num5%5 == 0 && num5%2 == 0){ 
                       
             System.out.println("É divisível por 10, 5 e 2"); 
             
-        }else if (num5%2 != 0) {
+        }else if (num5%10 == 0 && num5%5 == 0 && num5%2 != 0) {
             
-            System.out.println("Não é divisível por 10, 5 e 2");
+            System.out.println("É divisível por 10 e por 5, mas não por 2");
             
-        } */
+        } else if (num5%10 == 0 && num5%5 != 0 && num5%2 != 0){
+            
+            System.out.println("É divisível apenas por 10, mas não por 5 e 2");
+            
+        } else if (num5%10 != 0 && num5%5 == 0 && num5%2 == 0){
+            
+            System.out.println("É divisível por 5 e 2, mas não por 10");
+            
+        } else if (num5%10 != 0 && num5%5 != 0 && num5%2 == 0){
+            
+            System.out.println("É divisível apenas por 2, mas não por 10 e 5");
+            
+        } else if (num5%10 == 0 && num5%5 != 0 && num5%2 == 0){
+            System.out.println("É divisível por 10 e por 2, mas não por 5");
+        }
     }
     
 }
