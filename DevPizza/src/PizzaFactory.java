@@ -1,7 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class PizzaFactory {
+public class PizzaFactory { //regra de negocio dentro da factory
 
     public Pizza criarPizza(TipoPizza tipo){     //vai retornar uma Pizza de acordo com o parametro tipoPizza, que é outra classe
         Pizza pizza = null;

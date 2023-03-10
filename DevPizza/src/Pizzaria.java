@@ -1,4 +1,4 @@
-public class Pizzaria {     //CONTEXTO
+public class Pizzaria {     //CONTEXTO: quem cria as pizzas
 
    public Pizza pizza = null;
 
