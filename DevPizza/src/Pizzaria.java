@@ -9,7 +9,7 @@ public class Pizzaria {     //CONTEXTO: quem cria as pizzas
         var pizza = factory.criarPizza(tipo);   // variavel criada nesse contexto recebe o objeto criado de acordo com a classe PizzaFactory
     }
 
-    public void entregar(Pizza pizza){
+    public void entregar(){
         System.out.println(pizza.getDescricao());
     }
 
