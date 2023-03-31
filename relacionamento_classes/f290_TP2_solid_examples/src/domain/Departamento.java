@@ -1,9 +1,33 @@
+package domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Departamento {
     
 
     private String nome;
-    private List<Professor> professores;
+    private List<Professor> professores; // -> composição
     private String email;
+
+
+    public void criarProfessor(Professor professor){
+        this.professores.add(professor);   //adicionando na lista de professores 
+    }
+
+    public void excluirProfessor(Professor professor){
+        this.professores.remove(professor);    // removendo da lista de departamentoss
+    }
+
+    public void listarProfessores(){
+        System.out.println("Professores: \n");
+        this.professores.forEach(d -> {
+            System.out.println(d);
+        });
+        System.out.println("\n ------------------------------------");;
+    }
+    
+
     public String getNome() {
         return nome;
     }
