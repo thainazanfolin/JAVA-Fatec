@@ -1,5 +1,6 @@
 package domain;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
 
 public class Universidade {
     
-    private List<Departamento> departamentos;   //composta pela classe departamentos
+    private List<Departamento> departamentos = new ArrayList<>();  //inicializando lista //composta pela classe departamentos
     //depende exclusivamento dos departamento e vai gerir
 
     //metodos em UNIVERSIDADE que gerenciam DEPARTAMENTOS
@@ -27,7 +28,7 @@ public class Universidade {
         });
         System.out.println("\n ------------------------------------");;
     }
-    
+
     public List<Departamento> getDepartamentos() {
         return departamentos;
     }

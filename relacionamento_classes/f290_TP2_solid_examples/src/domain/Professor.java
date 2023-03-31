@@ -4,10 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Professor {
+    
     private List<Aluno> alunos = new ArrayList<>();
+    private String nome;    
 
     public Professor(List<Aluno> alunos) {
         this.alunos = alunos;
+    }
+
+    public Professor(String nome) {
+
+        this.nome = nome;
     }
 
     public void ensina(Curso curso) {
@@ -15,6 +22,27 @@ public class Professor {
         alunos.forEach(a -> a.assimilar(curso.getConhecimentos()));
         alunos.forEach(System.out::println);
 
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Professor [alunos=" + alunos + ", nome=" + nome + "]";
     }
 
 
