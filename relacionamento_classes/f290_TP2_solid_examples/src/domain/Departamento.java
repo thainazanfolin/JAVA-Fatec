@@ -1,6 +1,7 @@
 package domain;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class Departamento {
     
 
     private String nome;
-    private List<Professor> professores; // -> composição
+    private List<Professor> professores = new ArrayList<>(); // -> composição
     private String email;
 
 

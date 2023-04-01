@@ -1,14 +1,15 @@
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import domain.Aluno;
-import domain.Curso;
 import domain.Departamento;
 import domain.Professor;
 import domain.Universidade;
 
+
 public class App {
+    
     public static void main(String[] args) throws Exception {
     /*    
     Curso curso = new Curso("DSM", Arrays.asList("CI/CD", "TDD", "UX/UI"));
@@ -24,21 +25,32 @@ public class App {
         
 */
 
+        List<Professor> lista = new ArrayList<>();
+        lista.add(new Professor("Caroline"));
+        lista.add(new Professor("Thainá"));
+
     //settando usando o padrão builder
         Departamento deptoTI = new Departamento("Departamento de Tecnologia da Informação") //colocar os setters com builds logo em seguida, um seguido do outro, sem ponto e virgula
         .setEmail("depti@fatec.sp.gov.br")
-        .setProfessores(Arrays.asList(  //pode criar a lista antes ou AQUI (como feito abaixo)
-            new Professor("Caroline"),  //instanciando professores
-            new Professor("Daniel")
-            )
-        );   
+        .setProfessores(lista);   
 
         Universidade fatec = new Universidade();
         fatec.criarDepartamento(deptoTI);   //vai passar o departamento que ja foi instanciado
         fatec.listarDepartamentos();
-        
-        
 
+        deptoTI.criarProfessor();   //criar o professor no departamento de TI -> instanciando dentro da classe Professor (ver Professor)
+        
+        fatec.listarDepartamentos();
+        
+        List<Aluno> alunos = new ArrayList<>();
+        alunos.add(new Aluno("Val"));
+        alunos.add(new Aluno("Luiza"));
+        alunos.add(new Aluno ("Thaina"));
+
+        deptoTI.getProfessores().get(0).setAlunos(alunos);
+        deptoTI.getProfessores().get(1).setAlunos(alunos);
+
+        fatec.listarDepartamentos();
     
        
 
